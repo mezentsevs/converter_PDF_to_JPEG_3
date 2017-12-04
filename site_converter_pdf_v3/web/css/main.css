@@ -1,0 +1,53 @@
+p {
+    text-align: center;
+}
+
+form {
+    margin: 20px auto;
+    padding: 10px;
+    width: 25%;
+    min-width: 300px;
+    background: #EEE;
+    border-radius: 10px;
+}
+
+input {
+    margin: 10px;
+}
+
+#links {
+    text-align: center;
+}
+
+#sliderSection {
+    text-align: center;
+}
+
+#slider {
+    margin: 30px auto;
+    width: 640px;
+    text-align: center;
+}
+
+#slide {
+    width: 620px;
+    border: 1px solid #CCC;
+    -moz-box-shadow: 1px 1px 1px #CCC;
+    -o-box-shadow: 1px 1px 1px #CCC;
+    -webkit-box-shadow: 1px 1px 1px #CCC;
+    box-shadow: 1px 1px 1px #CCC;
+}
+
+#form {
+    margin: 50px auto;
+    text-align: center;
+}
+
+button {
+    margin: 10px 5px;
+    padding: 3px;
+}
+
+#imagesLinksList {
+    text-align: center;
+}

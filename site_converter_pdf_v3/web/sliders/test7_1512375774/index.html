@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Слайдер</title>
+</head>
+<style>
+body { margin: 0; font-family: Arial; font-size: 1em; }
+header { background: #EEE; height: 50px; }
+h1 { margin: 0; font-size: 1.2em; text-align: center; line-height: 50px; }
+main { min-height: 1000px; }
+#slider { margin: 50px auto; width: 640px; text-align: center; }
+#slide { width: 620px; border: 1px solid #CCC; -moz-box-shadow: 1px 1px 1px #CCC; -o-box-shadow: 1px 1px 1px #CCC; -webkit-box-shadow: 1px 1px 1px #CCC; box-shadow: 1px 1px 1px #CCC; }
+button { margin: 10px 5px; padding: 3px; }
+footer { background: #EEE; height: 50px; line-height: 50px; text-align: center; }
+</style>
+<script>
+var slider = {
+slides:['images/test7_1512375774_01.jpeg','images/test7_1512375774_02.jpeg','images/test7_1512375774_03.jpeg','images/test7_1512375774_04.jpeg','images/test7_1512375774_05.jpeg','images/test7_1512375774_06.jpeg','images/test7_1512375774_07.jpeg'],
+index:0,
+set: function(image) { document.getElementById("slide").setAttribute("src", image); },
+init: function() { this.set(this.slides[this.index]); },
+left: function() { this.index--; if (this.index < 0) { this.index = this.slides.length-1; } this.set(this.slides[this.index]); },
+right: function() { this.index++; if (this.index == this.slides.length) { this.index = 0; } this.set(this.slides[this.index]); }
+};
+window.onload = function() { slider.init(); setInterval(function() { slider.right(); },5000); };
+</script>
+<body>
+<header><h1>Слайдер</h1></header>
+<main>
+<figure id="slider">
+<img id="slide" src="" alt="слайд">
+<button id="left" onclick="slider.left();">&laquo; Назад</button>
+<button id="right" onclick="slider.right();">Далее &raquo;</button>
+</figure>
+</main>
+<footer><small>&copy; Copyright</small></footer>
+</body>
+</html>
